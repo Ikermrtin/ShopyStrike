@@ -1,0 +1,85 @@
+html{
+	display: flex;
+	justify-content: center;
+	background-image: url("fondo.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: repeat;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial;
+}
+
+.contenedor{
+	height: 1100px;
+	width: 400px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(15, auto);
+	grid-template-areas:"cabecera cabecera cabecera cabecera"
+						"menu menu menu menu"
+						"principal principal principal principal"
+						"principal principal principal principal"
+						"principal principal principal principal"
+						"principal principal principal principal"
+						"principal principal principal principal"
+						"principal principal principal principal"
+						"principal principal principal principal"
+						"principal principal principal principal"
+						"principal principal principal principal"
+						"principal principal principal principal"
+						"principal principal principal principal"
+						"principal principal principal principal"
+						"footer footer footer footer";
+}
+/*menú desplegable comienza aquí*/
+
+			.menu{margin:auto; width:1000px}
+			ul{list-style:none;}
+			.navegacion li a{background-color:#EED370;color:#fff;text-decoration:none;padding:10px 15px;display:block;}
+			.navegacion li a:hover{background-color:#3A5;color:orange;}
+
+			.navegacion>li{float:left; padding-inline: 70px}
+			.navegacion li ul{display:none;position:absolute;}
+			.navegacion li:hover>ul{display:block;}
+			.navegacion li ul li{position:relative;}
+
+/* menú desplegable acaba aquí*/
+.cabecera{
+		color: white;
+		display: flex;
+		justify-content: center;
+		background-color: orange;
+		grid-area: cabecera;
+}
+.menu{
+	margin:auto;
+	background-color: #EED370;
+	grid-area: menu;
+}
+.principal{
+	grid-area: principal;
+	background-color: skyblue;
+	padding: 20px;
+}
+
+footer{
+	background-color: orange;
+	grid-area: footer;
+	color: white;
+}
+.listado{
+	margin-left: 25px;
+}
+hr{
+	display: inline-block;
+	margin: 0px;
+}
+p > span{
+	font-size:8;
+	color:orange;
+	font-weight:bold;
+}
